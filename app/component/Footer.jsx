@@ -1,15 +1,17 @@
 'use client';
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Footer = () => {
-    const [year, setYear] = useState(2026);
-    useEffect(() => {
-        setYear(new Date().getFullYear());
-    }, []);
+  const [year, setYear] = useState(2026);
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
+
   return (
     <footer className="footer">
       <div className="container footer-inner">
-        <span>&copy; {new Date().getFullYear()} Aura Studio London</span>
+        <span>&copy; {year} Aura Studio London</span>
         <span>Purpose &bull; Simplicity &bull; Elegance</span>
       </div>
     </footer>
@@ -17,4 +19,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
